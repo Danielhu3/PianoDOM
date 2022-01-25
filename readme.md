@@ -9,6 +9,5 @@ Piano feito com JS utilizando DOM (Document Object Model)
   Para abrir o projeto basta abrir o arquivo <code> index.html </code> no navegador.
 </p>
 <p>
-  Para tocar utilize as teclas: a, w, s, e, d, f, t, g, y, h, u, j, k, o, l, p e ç
+  Para tocar utilize as teclas: a, w, s, e, d, f, t, g, y, h, u, j, k, o, l, p & ç
  </p>
-
