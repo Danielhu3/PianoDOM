@@ -39,12 +39,26 @@ function playNote(event) {
   }
 
   playAudio(audioKeyCode)
+  addPlayingClass(key)
 }
 
-// mouse click
-keys.forEach(function (key) {
-  key.addEventListener('click', playNote)
-})
+function addPlayingClass(key) {
+  key.classList.add('playing')
+}
 
-// type keyboard
-window.addEventListener('keydown', playNote)
+function removePlayingClass(event) {
+  event.target.classList.remove('playing')
+}
+
+function registerEvents() {
+  // mouse click
+  keys.forEach(function (key) {
+    key.addEventListener('click', playNote)
+    key.addEventListener('transitionend', removePlayingClass)
+  })
+
+  // type keyboard
+  window.addEventListener('keydown', playNote)
+}
+
+window.addEventListener('load', registerEvents)
